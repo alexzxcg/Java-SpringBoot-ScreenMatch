@@ -36,7 +36,7 @@ public class Principal {
         }
         temporadas.forEach(System.out::println);
 
-        //Forma manual de iterar sobre a lista de temporadas e conseguir os titulos dos episodios
+        //Forma manual de iterar sobre a lista e conseguir os titulos dos episodios
         /*for(int i = 0; i < dados.totalTemporadas(); i++){
             List<DadosEpisodio> episodiosTemporada = temporadas.get(i).episodios();
             for(int j = 0; j < episodiosTemporada.size(); j++){
