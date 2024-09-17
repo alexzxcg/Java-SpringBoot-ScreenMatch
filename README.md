@@ -1,12 +1,19 @@
-# Java-Spring-ScreenMatch
+# Java Spring ScreenMatch
 
-# Sobre
-Este projeto está sendo desenvolvido durante o curso oferecido pela Alura sobre Java, que aborda lambdas, streams e o framework Spring.
+# Objetivo do Projeto: Streaming de Filmes e Séries
+> Este projeto está sendo desenvolvido durante o curso oferecido pela Alura sobre Java, que aborda lambdas, streams e o framework Spring.
+> Este projeto visa desenvolver uma aplicação back-end para streaming de filmes e séries, utilizando Java com o framework Spring Boot. A aplicação será projetada sem a camada Web, focando exclusivamente na lógica de servidor.
 
-# Projeto
-- Objetivo
-> O projeto tem como propósito criar uma aplicação de streaming de filmes e séries para o back-end em Java, utilizando o framework Spring Boot sem a camada Web.
-> O objetivo principal é aprofundar o conhecimento sobre os recursos do Spring Boot e suas funcionalidades.
+# Características do Projeto:
+- Integração com OMDb API: A aplicação fará requisições à [API OMDb](https://www.omdbapi.com/) para obter informações sobre filmes e séries, processando e manipulando esses dados para fornecer uma experiência robusta de streaming.
+- Spring Boot em Ação: O principal objetivo é aprofundar o conhecimento sobre os recursos e funcionalidades do Spring Boot, explorando sua capacidade de lidar com operações de back-end de forma eficiente e escalável.
+# Objetivos de Aprendizado:
+- Aprimoramento em Spring Boot: Ganhar experiência prática com o framework Spring Boot e suas funcionalidades avançadas, sem a camada Web.
+- Manipulação de APIs: Desenvolver habilidades em integrar e trabalhar com APIs externas para enriquecimento dos dados da aplicação.
+# O Que Esperar:
+- Atualizações Regulares: Acompanhe o progresso do projeto e as etapas concluídas através das atualizações diárias.
+- Desafios e Soluções: Explore os desafios enfrentados e as soluções implementadas durante o desenvolvimento.
+- Sinta-se à vontade para explorar o código e contribuir com sugestões ou feedback!
 
 # O que foi feito até agora?
 - Hoje, dia 12/09/2024, além da criação do projeto, foi criado o pacote service, que contém a classe ConsumoApi. O objetivo desta classe é receber uma URL passada como parâmetro para o método, construí-la e, assim, obter a resposta da requisição para uma API, armazenando-a para uso posterior. Também foi criado o pacote model, que contém a classe DadosSerie, do tipo record. O objetivo dessa classe é construir objetos com base nos dados resgatados pela requisição da API. Por ser uma classe do tipo record, os objetos criados serão imutáveis.
