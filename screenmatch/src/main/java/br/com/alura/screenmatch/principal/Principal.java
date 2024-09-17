@@ -7,8 +7,10 @@ import br.com.alura.screenmatch.service.ConsumoApi;
 import br.com.alura.screenmatch.service.ConverteDados;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class Principal {
 
@@ -46,6 +48,21 @@ public class Principal {
 
         //Usando uma expressao lambda para iterar sobre as temporadas e para cada episodio trazer o seu titulo
         temporadas.forEach( t -> t.episodios().forEach(e -> System.out.println(e.titulo())));
+
+
+        //Usando uma stream para criar uma nova lista de DadosEpisodio contendo todos os episodios de todas as temporadas
+        List<DadosEpisodio> dadosEpisodios = temporadas.stream()
+                .flatMap(t -> t.episodios().stream())
+                .collect(Collectors.toList());
+
+
+        //Usando uma stream para buscar dentro da lista de todos os episodios, para conseguir filtrar o top 5 episodios com base na sua avaliacao
+        System.out.println("\nTop 5 episódios");
+        dadosEpisodios.stream()
+                .filter(e -> !e.avaliacao().equalsIgnoreCase("N/A"))
+                .sorted(Comparator.comparing(DadosEpisodio::avaliacao).reversed())
+                .limit(5)
+                .forEach(System.out::println);
 
     }
 }
