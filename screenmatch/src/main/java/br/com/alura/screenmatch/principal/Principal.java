@@ -9,10 +9,7 @@ import br.com.alura.screenmatch.service.ConverteDados;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Principal {
@@ -90,5 +87,20 @@ public class Principal {
                                " Episódio: " + e.getTitulo() +
                                 " Data lançamento: " + e.getDataLancamento().format(dataFormatada)
                 ));
+
+
+        //Buscando um episodio por um trecho do seu titulo e mostrando em qual temporada ele se encontra
+        System.out.println("Digite um trecho do titulo do episódio");
+        var trechoDoTitulo = leitura.nextLine();
+        Optional<Episodio> episodioBuscado = episodios.stream()
+                .filter(e -> e.getTitulo().toUpperCase().contains(trechoDoTitulo.toUpperCase()))
+                .findFirst();
+
+        if(episodioBuscado.isPresent()){
+            System.out.println("Episódio encontrado!");
+            System.out.println("Temporada: " + episodioBuscado.get().getTemporada());
+        }else {
+            System.out.println("Episódio não encontrado");
+        }
     }
 }
