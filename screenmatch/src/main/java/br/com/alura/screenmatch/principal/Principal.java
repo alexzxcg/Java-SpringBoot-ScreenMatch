@@ -102,5 +102,12 @@ public class Principal {
         }else {
             System.out.println("Episódio não encontrado");
         }
+
+        //Mostra a estatistica da média de avaliação por temporada
+        Map<Integer, Double> avaliacoesPorTemporada = episodios.stream()
+                .filter(e -> e.getAvaliacao() > 0.0)
+                .collect(Collectors.groupingBy(Episodio::getTemporada,
+                        Collectors.averagingDouble(Episodio::getAvaliacao)));
+        System.out.println(avaliacoesPorTemporada);
     }
 }
