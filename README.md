@@ -27,3 +27,6 @@
 - No dia 18 de setembro de 2024, foram implementadas três novas funcionalidades, sendo duas voltadas para buscas. A primeira permite ao usuário filtrar episódios a partir de uma data informada, mostrando todos os episódios lançados desde essa data. A segunda funcionalidade possibilita ao usuário buscar um episódio com base em um trecho do título, informando em qual temporada o episódio se encontra.
 
   Além disso, foi criada uma função map com uma stream que calcula a média das avaliações por temporada e a exibe. Também foi explorado o uso da função peek para depuração de streams, permitindo observar seu comportamento durante a execução.
+- No dia 19 de setembro de 2024, exploramos o uso da biblioteca "DoubleSummaryStatistics" para implementar uma nova função em stream que calcula e exibe a média total das avaliações dos episódios, considerando apenas aqueles com registro de avaliações. A função também mostra o episódio mais bem avaliado, o menor avaliado e o total de episódios utilizados para calcular a média.
+
+- Após a conclusão dessa aplicação, um desafio foi proposto, cujos detalhes podem ser encontrados em outro repositório.
