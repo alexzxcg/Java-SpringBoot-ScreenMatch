@@ -99,8 +99,10 @@ public class Principal {
         if(episodioBuscado.isPresent()){
             System.out.println("Episódio encontrado!");
             System.out.println("Temporada: " + episodioBuscado.get().getTemporada());
+            System.out.println();
         }else {
             System.out.println("Episódio não encontrado");
+            System.out.println();
         }
 
         //Mostra a estatistica da média de avaliação por temporada
@@ -108,6 +110,16 @@ public class Principal {
                 .filter(e -> e.getAvaliacao() > 0.0)
                 .collect(Collectors.groupingBy(Episodio::getTemporada,
                         Collectors.averagingDouble(Episodio::getAvaliacao)));
+        System.out.println("Média de avaliação por temporada");
         System.out.println(avaliacoesPorTemporada);
+        System.out.println();
+
+        DoubleSummaryStatistics est = episodios.stream()
+                .filter(e -> e.getAvaliacao() > 0.0)
+                .collect(Collectors.summarizingDouble(Episodio::getAvaliacao));
+        System.out.println("Média total: " + est.getAverage());
+        System.out.println("Melhor avaliado: " + est.getMax());
+        System.out.println("Pior avaliado: " + est.getMin());
+        System.out.println("Total de episódios avaliados: " + est.getCount());
     }
 }
