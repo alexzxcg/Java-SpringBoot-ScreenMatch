@@ -30,3 +30,6 @@
 - No dia 19 de setembro de 2024, exploramos o uso da biblioteca "DoubleSummaryStatistics" para implementar uma nova função em stream que calcula e exibe a média total das avaliações dos episódios, considerando apenas aqueles com registro de avaliações. A função também mostra o episódio mais bem avaliado, o menor avaliado e o total de episódios utilizados para calcular a média.
 
 - Após a conclusão dessa aplicação, um desafio foi proposto, cujos detalhes podem ser encontrados em outro repositório.
+
+# Desafio
+- [Link](https://github.com/alexzxcg/Desafio-TabelaFipe/tree/main)
