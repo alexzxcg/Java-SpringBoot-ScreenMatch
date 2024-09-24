@@ -31,5 +31,8 @@
 
 - Após a conclusão dessa aplicação, um desafio foi proposto, cujos detalhes podem ser encontrados em outro repositório.
 
-# Desafio
+# Desafio TabelaFipe
 - [Link](https://github.com/alexzxcg/Desafio-TabelaFipe/tree/main)
+
+# Evoluindo Aplicação
+> Nesta etapa do projeto, o foco será aprimorar a aplicação com a integração de um banco de dados, utilizando o Spring Data JPA para gerenciar e acessar os dados de forma eficiente e estruturada.
